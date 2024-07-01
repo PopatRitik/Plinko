@@ -1,0 +1,122 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  background: black;
+  color: bisque;
+  overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-logo {
+  max-width: 50px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Added padding for better appearance on small screens */
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Added padding for better appearance */
+}
+
+.footer-logo {
+  max-width: 50px;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%; /* Changed to percentage for better responsiveness */
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1); /* Added a slight background for better visibility */
+}
+
+.home-container h1 {
+  font-size: 2.5em;
+  margin: 10px 0; /* Added margin for better spacing */
+}
+
+.home-container h3 {
+  font-size: 1.2em;
+  margin: 10px 0; /* Added margin for better spacing */
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  background-color: black;
+  color: bisque;
+  border: solid bisque;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.hb {
+  margin-bottom: 100px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column; /* flex-col */
+  align-items: center;    /* items-center */
+  justify-content: center; /* justify-center */
+  padding: 20px; /* Added padding for spacing */
+}
+
+@media (min-width: 768px) { /* medium breakpoint typically starts at 768px */
+  .home-container {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) { /* lg: breakpoint typically starts at 1024px */
+  .game-container {
+    flex-direction: row; /* flex-row */
+  }
+  .home-container {
+    max-width: 600px;
+    margin-top: 120px;
+  }
+}
